@@ -1,0 +1,280 @@
+:root{
+    --animate-delay: 0.5s;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+}
+
+body{
+    background: rgba(0, 230, 146, 0.08);
+    
+}
+
+a{
+    text-decoration: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+  }
+
+
+
+.sideNav{
+    z-index: 1;
+    background: rgba(0, 230, 146, 0.2);
+    position: fixed;
+    width: 3%;
+    height: 20rem;
+    top: 50%;
+    transform: translate(0, -50%);
+
+    border-radius: 30px;
+
+
+    
+}
+
+.sideNav p{
+    /* C */
+
+
+
+
+font-style: normal;
+font-weight: 500;
+font-size: 1.5rem;
+/* identical to box height, or 42% */
+
+
+color: #000000;
+
+text-shadow: -4.44783px 3.083px 0px #8DE3C3;
+
+text-align: center;
+padding-top: 10px;
+}
+
+
+.sideNav .option{
+    margin-top: 0.3rem;
+    color: #00E692;
+    border-right: none;
+    height: 1.8rem;
+    
+    display: flex;
+    justify-content: center;
+   align-items: center;
+   cursor: pointer;
+   /* animation: fadeIn; */
+    
+}
+
+.sideNav .option:hover{
+    /* animation: fadeIn 1s; */
+    transition: all 200ms ease-in-out;
+    color: #236B51;
+}
+
+.sideNav .option:nth-of-type(1){
+    margin-top: 3rem;
+}
+
+.sideNav .option.active {
+    color: #236B51;
+    border-right: #236B51 solid 3px;
+    
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+
+
+
+
+
+.lowerNav{
+    z-index: 1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    background: rgba(0, 230, 146, 0.2);
+    position: fixed;
+    width: 10rem;
+    height: 3rem;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    border-radius: 30px;
+}
+
+.lowerNav i{
+    font-size: 1.2rem;
+}
+
+.contentWrapper{
+    scroll-snap-type: y mandatory;
+}
+
+
+/* Content Profile */
+
+.content.profile{
+    margin-left: 10rem;
+    padding-top: 7rem;
+    display: flex;
+    margin-bottom: 5rem;
+    
+}
+
+.content.profile h1{
+    text-shadow: -10.44783px 4.083px 0px #8DE3C3;
+    font-weight: 500;
+    width: 24rem;
+    font-size: 4rem;
+    letter-spacing: 0.3rem;
+    line-height: 5rem;
+
+}
+
+.content.profile p{
+    margin-top: 1rem;
+    font-size: 1.3rem;
+}
+
+.content.profile h5{
+    font-size: 1.2rem;
+}
+
+
+.content.profile p:nth-last-of-type(1){
+    color: #236B51;
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    width: 35rem;
+}
+
+.rightSide{
+    width: 18rem;
+    overflow: hidden;
+    border-radius: 30px;
+    margin-left: 5rem;
+    box-shadow: 12.44783px 15.083px 0px #8DE3C3;
+}
+
+.rightSide img{
+    width: 25rem;
+    transform: scale(1.1);
+    object-position: -3rem;
+}
+
+
+
+/* Content Skill */
+
+
+.content.skill{
+    /* background-color: aqua;
+    width: 20rem;
+    height: 35rem; */
+    /* margin-top: 5rem; */
+    padding-top: 2rem;
+    margin-left: 10rem;
+    
+}
+
+.content.skill h1{
+    text-shadow: -10.44783px 4.083px 0px #8DE3C3;
+    font-weight: 500;
+    width: 24rem;
+    font-size: 3rem;
+    letter-spacing: 0.3rem;
+    line-height: 5rem;
+}
+
+.content.skill p{
+    color: #236B51;
+    margin-top: 1rem;
+    font-size: 1rem;
+    width: 34rem;
+}
+
+.balls{
+ 
+    width: 60rem;
+    height: 20rem;
+    margin-left: 5rem;
+    padding-bottom: 5rem;
+}
+
+.upperSkill, .lowerSkill{
+    display: flex;
+    margin-top: 3rem;
+}
+
+.upperSkill{
+    margin-top: 2rem;
+}
+
+.ball img{
+    width: 7rem;
+    /* object-position: 0 0.5rem; */
+    margin-top: 0.7rem;
+    /* height: 10rem; */
+}
+
+
+
+
+.ball{
+    text-align: center;
+    width: 8rem;
+    height: 8rem;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 6rem;
+    box-shadow: 6.44783px 10.083px 0px #8DE3C3;
+    margin-left: 10rem;
+}
+
+.ball:nth-of-type(1){
+    margin-left: 0;
+}
+
+.lowerSkill .ball{
+    margin-left: 10rem;
+}
+
+.ball.js img{
+    transform: scale(0.7);
+    /* object-position: 0 0.5rem; */
+    /* height: 8rem; */
+}
+
+.ball.php img{
+    margin-top: 2.2rem;
+}
+
+.ball.mysql img{
+    margin-top: 0.5rem;
+    /* object-position: center; */
+}
+
+
+/* Custom Animation */
+
+.ball.html{
+    --animate-duration: 2s;
+}
+
+
+
+
