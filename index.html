@@ -25,6 +25,7 @@
 
 
 
+
     </head>
     <body>
         <div class="sideNav" id="myNav">
@@ -51,63 +52,134 @@
                 <i class="fa-solid fa-circle-check" data-sideNav-button></i>
             </a>
 
-            <a class="option project" data-sideNav data-sideNav-button>
+            <a class="option project" data-sideNav data-sideNav-button
+            onclick="scrollFunction('project')">
                 <i class="fa-solid fa-list-check" data-sideNav-button></i>
             </a>
         </div>
-
-        <div class="contentWrapper" onmousewheel="">
-            <div class="content profile" id="profile">
-                <div class="leftSide">
-                    <h1 class="animate__animated animate__slideInDown">
-                        Christopher Nathanael
-                    </h1>
-                    <p class="animate__animated animate__fadeInUp">
-                        Computer Science Student
-                    </p>
-                    <h5 class="animate__animated animate__fadeInUp">
-                        Binus University
-                    </h5>
-                    <p class="animate__animated animate__fadeInUp">
-                        I'm currently a Computer Science student who loves
-                        web-development and looking foward into projects where i can
-                        develop my skills by helping people
-                    </p>
-                </div>
+            
     
-                <div class="rightSide animate__animated animate__slideInRight">
-                    <img src="siesta2.png" alt="" />
-                </div>
-            </div>
-    
-            <div class="content skill" id="skill">
-                <h1 class="Skill-title">
-                    My Skills
-                </h1>
-    
-                <p class="Skill-desc">
-                    Here are the skills that i currently developing for Web-Development. <br>I'm aiming to be able build a fully functional website from front-end until back-end
-                </p>
-    
-    
-                <div class="balls">
-                    <div class="upperSkill">
-                        <div class="ball html animate__delay-1s"><img src="html logo.png" alt=""></div>
-                        <div class="ball css animate__delay-2s"><img src="css logo.png" alt=""></div>
-                        <div class="ball js animate__delay-3s"><img src="Unofficial_JavaScript_logo_2.svg.png" alt=""></div>
+            <div class="contentWrapper">
+                <div class="content profile" id="profile">
+                    <div class="leftSide">
+                        <h1 class="animate__animated animate__slideInLeft">
+                            Christopher Nathanael
+                        </h1>
+                        <p class="animate__animated animate__fadeInUp">
+                            Computer Science Student
+                        </p>
+                        <h5 class="animate__animated animate__fadeInUp">
+                            Binus University
+                        </h5>
+                        <p class="animate__animated animate__fadeInUp">
+                            I'm currently a Computer Science student who loves
+                            web-development and looking foward into projects where i can
+                            develop my skills by helping people
+                        </p>
                     </div>
-                   <div class="lowerSkill ">
-                    <div class="ball mysql animate__delay-4s"><img src="mysql logo.png" alt=""></div>
-                    <div class="ball php animate__delay-5s"><img src="php logo.png" alt=""></div>
-                   </div>
-                    
+        
+                    <div class="rightSide animate__animated animate__slideInRight">
+                        <img src="pasfoto.jfif" alt="" />
+                    </div>
+                </div>
+        
+                <div class="content skill" id="skill">
+                    <h1 class="Skill-title">
+                        My Skills
+                    </h1>
+        
+                    <p class="Skill-desc">
+                        Here are the skills that i currently developing for Web-Development. <br>I'm aiming to be able build a fully functional website from front-end until back-end
+                    </p>
+        
+        
+                    <div class="balls">
+                        <div class="upperSkill">
+                            <div class="ball html animate__delay-1s"><img src="html logo.png" alt=""></div>
+                            <div class="ball css animate__delay-2s"><img src="css logo.png" alt=""></div>
+                            <div class="ball js animate__delay-3s"><img src="Unofficial_JavaScript_logo_2.svg.png" alt=""></div>
+                        </div>
+                       <div class="lowerSkill ">
+                        <div class="ball mysql animate__delay-4s"><img src="mysql logo.png" alt=""></div>
+                        <div class="ball php animate__delay-5s"><img src="php logo.png" alt=""></div>
+                       </div>
+                        
+                    </div>
+        
+        
+        
                 </div>
     
     
-    
-            </div>
-        </div>
+                <div class="content projects" id="project">
+                    <div class="headerWrapper">
+                        <h1 class="Projects-title">
+                            My Projects
+                        </h1>
 
+                        <div class="backButton">
+
+                        </div>
+
+                        <div class="nextButton">
+                            
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="projectWrapper">
+                        <section class="project erigo hide">
+                            <a href="https://github.com/dwizz11/Project-Mulmed-Erigo" class="projectLeftSide">
+                                <div class="blurLayer"></div>
+                                <img src="erigo infos.png" alt="">
+                                
+                            </a>
+        
+                            <div class="projectRightSide">
+                                <h2>Erigo Infos</h2>
+                                <span>HTML - CSS - PHP</span>
+                                <p>Erigo Infos is a project made by me and my classmates where this website provide such information about Erigo Apparel from their latest products, FAQ, content updates, and many more</p>
+                            </div>
+                        </section>
+
+                        <section class="project waifuCollector hide">
+                            <a href="https://github.com/dwizz11/Project-Mulmed-Erigo" class="projectLeftSide">
+                                <div class="blurLayer"></div>
+                                <img src="erigo infos.png" alt="">
+                                
+                            </a>
+        
+                            <div class="projectRightSide">
+                                <h2>Waifu Collector</h2>
+                                <span>HTML - CSS - PHP</span>
+                                <p>Erigo Infos is a project made by me and my classmates where this website provide such information about Erigo Apparel from their latest products, FAQ, content updates, and many more</p>
+                            </div>
+                        </section>
+
+                        <section class="project discite">
+                            <a href="https://github.com/dwizz11/Project-Mulmed-Erigo" class="projectLeftSide">
+                                <div class="blurLayer"></div>
+                                <img src="erigo infos.png" alt="">
+                                
+                            </a>
+        
+                            <div class="projectRightSide">
+                                <h2>Discite</h2>
+                                <span>HTML - CSS - PHP</span>
+                                <p>Erigo Infos is a project made by me and my classmates where this website provide such information about Erigo Apparel from their latest products, FAQ, content updates, and many more</p>
+                            </div>
+                        </section>
+                    </div>
+                    
+
+                    
+    
+                </div>
+            </div>
+    
+    
+           
+        
 
         <div class="lowerNav">
             <i class="fa-brands fa-instagram"></i>
@@ -115,10 +187,12 @@
             <i class="fa-brands fa-github"></i>
             <i class="fa-brands fa-twitter"></i>
         </div>
+      
     </body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-appear/0.1/jquery.appear.min.js"></script>
     <script src="index.js"></script>
+    
   
 </html>
