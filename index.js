@@ -12,14 +12,7 @@ window.onbeforeunload = function () {
     window.scrollTo(0, 0);
 };
 
-// function scrollFunctionSkill() {
-//     let e = document.getElementById("skill");
-//     e.scrollIntoView({
-//         block: "start",
-//         behavior: "smooth",
-//         inline: "start",
-//     });
-// }
+
 
 var flagClicked = 0;
 
