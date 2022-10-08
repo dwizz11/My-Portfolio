@@ -12,11 +12,23 @@ window.onbeforeunload = function () {
     window.scrollTo(0, 0);
 };
 
+function isScrolledIntoView(elem)
+{
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+
+    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+}
+
 
 
 var sideNav = document.getElementById('myNav');
 
 sideNav.addEventListener("click", (e) => {
+    var before,active;
     var whichSideNav = e.target.matches("[data-sideNav-button]");
 
     // console.log(whichSideNav);
@@ -27,6 +39,8 @@ sideNav.addEventListener("click", (e) => {
         .closest("[data-sideNav]")
         .classList.contains("active");
 
+    var getSideNav = e.target.closest("[data-sideNav]");
+
     console.log(ifactive);
     if (whichSideNav && ifactive) return;
 
@@ -35,24 +49,40 @@ sideNav.addEventListener("click", (e) => {
         var getAllSideNav = document.getElementsByClassName("option");
 
         for (let index = 0; index < getAllSideNav.length; index++) {
-            if(getAllSideNav[index].classList.contains("active") && getAllSideNav[index].classList.contains("profile")){
-                removeProfileClass();
-            }else if(getAllSideNav[index].classList.contains("active") && getAllSideNav[index].classList.contains("skill")){
-                removeSkillClass();
-            }else{
-                removeProjectClass();
-            }
-            getAllSideNav[index].classList.remove("active");
+            // if(getAllSideNav[index].classList.contains("active") && getAllSideNav[index].classList.contains("profile")){
+            //     removeProfileClass();
+            // }else if(getAllSideNav[index].classList.contains("active") && getAllSideNav[index].classList.contains("skill")){
+            //     removeSkillClass();
+            // }else{
+            //     removeProjectClass();
+            // }  
+
+            if(getSideNav === getAllSideNav[index]) active = index;
+            if(getAllSideNav[index].classList.contains("active")){
+                removeClasses(index);
+                getAllSideNav[index].classList.remove("active");
+                // active = index;
+                before = index;
+                // console.log(getAllSideNav[index]);
+                // break;
+            } 
+           
         }
 
-        var getSideNav = e.target.closest("[data-sideNav]");
+        // console.log(before + " " + active);
+
+        // var getSideNav = e.target.closest("[data-sideNav]");
+        // console.log(getSideNav);
+        addClasses(before, active);
         getSideNav.classList.add("active");
 
-        if( getSideNav.classList.contains("skill")) return addSkillClass();
+        addClasses
 
-        if( getSideNav.classList.contains("profile")) return addProfileClass();
+        // if( getSideNav.classList.contains("skill")) return addSkillClass() ;
 
-        if( getSideNav.classList.contains("project")) return addProjectClass();
+        // if( getSideNav.classList.contains("profile")) return addProfileClass() ;
+
+        // if( getSideNav.classList.contains("project")) return addProjectClass() ;
 
     }
 });
@@ -153,6 +183,27 @@ document.addEventListener(
     }
 );
 
+function removeClasses(before){
+    if(before == 0){
+
+        removeProfileClass();
+    }else if(before == 1){
+        removeSkillClass();
+    }else{
+        removeProjectClass();
+    }
+}
+
+function addClasses(before, current){
+    var time = (Math.abs(current-before))*100 + 100
+    if(current == 0){
+        setTimeout(addProfileClass, time)
+    }else if(current == 1){
+        setTimeout(addSkillClass, time)
+    }else if(current == 2){
+        setTimeout(addProjectClass, time)
+    }
+}
 
 
 function removeSkillClass() {
