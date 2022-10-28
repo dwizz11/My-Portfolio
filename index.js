@@ -1,6 +1,6 @@
 function scrollFunction(x) {
     let e = document.getElementById(x);
-    console.log(e);
+    // console.log(e);
     e.scrollIntoView({
         block: "start",
         behavior: "smooth",

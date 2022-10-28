@@ -451,8 +451,9 @@ body::-webkit-scrollbar {
     }
 
     .projectWrapper .project.hide{
-        margin-left: -80rem;
+        margin-left: -79rem;
     }
+
   }
 
   @media only screen and (max-width: 1253px) {
@@ -463,4 +464,6 @@ body::-webkit-scrollbar {
     .projectWrapper .project.hide{
         margin-left: -68rem;
     }
+
+   
   }
